@@ -1,6 +1,6 @@
 
 let typed = new Typed('.multiple-text', {
-    strings: ['Desenvolvedor Backend', 'PHP Developer', 'MySQL Expert'],
+    strings: ['Dev Backend', 'PHP Developer', 'MySQL Expert'],
     typeSpeed: 80,
     backSpeed: 60,
     backDelay: 2000,
