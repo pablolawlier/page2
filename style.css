@@ -24,7 +24,7 @@ body {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
-    
+
 }
 
 .header {
@@ -78,6 +78,7 @@ html {
 }
 
 .home {
+    zoom: 90%;
     position: relative;
     width: 100%;
     height: 100v;
@@ -88,7 +89,7 @@ html {
 }
 
 .home-content {
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .home-content h3 {
@@ -345,6 +346,7 @@ section:nth-child(even) {
 
     .header {
         height: 60px;
+        padding: 10px 5%;
     }
 
     .navbar {
@@ -352,14 +354,26 @@ section:nth-child(even) {
         top: 60px;
         left: -100%;
         width: 100%;
-        padding: 1rem 4%;
         background: rgba(31, 36, 45, 0.95);
         backdrop-filter: blur(10px);
-        transition: 0.3s ease;
+        padding: 1rem 4%;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
     }
 
     .navbar.active {
         left: 0;
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .home-content {
+        text-align: center;
     }
 
     .home-content h1 {
@@ -367,32 +381,15 @@ section:nth-child(even) {
     }
 
     .home-img img {
-        max-width: 80%;
+        max-width: 90%;
+        margin: 20px auto;
+        display: block;
     }
 
-    .about-content {
+    .btn-group {
         flex-direction: column;
-    }
-
-    .about-img {
-        margin-bottom: 30px;
-    }
-
-    .skills-container {
-        padding: 0;
-    }
-
-    .portfolio-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .contact form .input-box {
-        flex-direction: column;
-    }
-
-    .contact form .input-box input {
-        width: 100%;
+        gap: 15px;
+        align-items: center;
     }
 }
 
@@ -401,25 +398,44 @@ section:nth-child(even) {
         font-size: 45%;
     }
 
+    .header {
+        height: 50px;
+        padding: 5px 5%;
+    }
+
+    .menu-btn {
+        font-size: 2rem;
+    }
+
     .home-content h1 {
         font-size: 28px;
     }
 
     .home-content h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
-    .btn-group {
-        flex-direction: column;
-        gap: 15px;
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
     .social-media a {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
         font-size: 16px;
     }
+    
+    .navbar a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .home-img img {
+        max-width: 100%;
+    }
 }
+
 
 .about {
     display: flex;
@@ -443,6 +459,7 @@ section:nth-child(even) {
 }
 
 .about-img {
+    
     position: relative;
     width: 280px;
     height: 280px;
@@ -486,10 +503,10 @@ section:nth-child(even) {
 }
 
 .about-details p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     line-height: 1.8;
     color: #ccc;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .personal-info {
@@ -695,7 +712,7 @@ section:nth-child(even) {
     height: 100%;
     object-fit: cover;
     transition: .5s ease;
-    opacity: 0.3; 
+    opacity: 0.3;
 }
 
 .portfolio-box:hover img {
@@ -809,11 +826,12 @@ section:nth-child(even) {
         padding: 1rem;
         gap: 1.5rem;
     }
-    
+
     .portfolio-layer {
         padding: 1.5rem;
     }
 }
+
 .project-features {
     list-style: none;
     margin: 0.8rem 0;
