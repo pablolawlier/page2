@@ -1,6 +1,5 @@
-
 let typed = new Typed('.multiple-text', {
-    strings: ['Dev Backend', 'PHP Developer', 'MySQL Expert'],
+    strings: ['Desenvolvedor Backend', 'PHP Developer', 'MySQL Expert'],
     typeSpeed: 80,
     backSpeed: 60,
     backDelay: 2000,
@@ -175,3 +174,19 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Fechar menu ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !menuBtn.contains(e.target) && navbar.classList.contains('active')) {
+        navbar.classList.remove('active');
+        menuBtn.classList.remove('active');
+    }
+});
+
+// Fechar menu ao rolar a página
+window.addEventListener('scroll', () => {
+    if (navbar.classList.contains('active')) {
+        navbar.classList.remove('active');
+        menuBtn.classList.remove('active');
+    }
+});
