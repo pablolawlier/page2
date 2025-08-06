@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Portfolio</title>
+    <meta name="description" content="Pablo Henrique Rodrigues - Desenvolvedor Backend especializado em PHP e MySQL. Portfolio com projetos profissionais e soluções web robustas.">
+    <meta name="keywords" content="desenvolvedor, backend, PHP, MySQL, javascript, portfolio, freelancer, ribeirão preto">
+    <meta name="author" content="Pablo Henrique Rodrigues">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pablo Henrique - Desenvolvedor Backend">
+    <meta property="og:description" content="Desenvolvedor Backend especializado em PHP e MySQL com 4+ anos de experiência">
+    <meta property="og:image" content="home.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Pablo Henrique - Desenvolvedor Backend">
+    <meta property="twitter:description" content="Desenvolvedor Backend especializado em PHP e MySQL com 4+ anos de experiência">
+    <meta property="twitter:image" content="home.png">
+    
+    <title>Pablo Henrique - Desenvolvedor Backend | Portfolio Profissional</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 
@@ -36,16 +53,16 @@
         <p>Sou um desenvolvedor, especializado em desenvolvimento backend com PHP e MySQL. Com experiência em criar soluções robustas e escaláveis, busco sempre as melhores práticas de programação.</p>
             
         <div class="social-media">
-            <a href="#" style="--i:7" title="Facebook"><i class='bx bxl-facebook'></i></a>
-            <a href="#" style="--i:8" title="Twitter"><i class='bx bxl-twitter'></i></a>
-            <a href="#" style="--i:9" title="Instagram"><i class='bx bxl-instagram'></i></a>
-            <a href="#" style="--i:10" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-            <a href="#" style="--i:11" title="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="mailto:pablohenriquerodrigues456@gmail.com" style="--i:7" title="Email" target="_blank"><i class='bx bx-envelope'></i></a>
+            <a href="https://wa.me/5516997340486?text=Olá! Vi seu portfólio e gostaria de conversar." style="--i:8" title="WhatsApp" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://instagram.com/pablo.henrique" style="--i:9" title="Instagram" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://linkedin.com/in/pablo-henrique-rodrigues" style="--i:10" title="LinkedIn" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/pablohenrique" style="--i:11" title="GitHub" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
         
         <div class="btn-group">
             <a href="#contact" class="btn">Contate-me</a>
-            <a href="#" class="btn btn-outline">Download CV</a>
+            <a href="#" class="btn btn-outline" id="download-cv-btn">Download CV</a>
         </div>
     </div>
     
@@ -103,7 +120,7 @@
             </div>
             
             <div class="btn-box">
-                <a href="#" class="btn">Download CV</a>
+                <a href="#" class="btn" id="download-cv-btn-2">Download CV</a>
                 <a href="#contact" class="btn btn-outline">Fale Comigo</a>
             </div>
         </div>
@@ -335,8 +352,7 @@
                 <i class='bx bx-envelope'></i>
                 <div class="info">
                     <h4>Email</h4>
-                    <a href="mailto:seu.email@exemplo.com">pablohenriquerodrigues456@gmail.com
-                    </a>
+                    <a href="mailto:pablohenriquerodrigues456@gmail.com">pablohenriquerodrigues456@gmail.com</a>
                 </div>
             </div>
 
@@ -349,46 +365,46 @@
             </div>
 
             <div class="social-links">
-                <a href="#" class="linkedin">
+                <a href="https://linkedin.com/in/pablo-henrique-rodrigues" target="_blank" class="linkedin">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="#" class="github">
+                <a href="https://github.com/pablohenrique" target="_blank" class="github">
                     <i class='bx bxl-github'></i>
                 </a>
-                <a href="#" class="whatsapp">
+                <a href="https://wa.me/5516997340486?text=Olá! Vi seu portfólio e gostaria de conversar sobre oportunidades." target="_blank" class="whatsapp">
                     <i class='bx bxl-whatsapp'></i>
                 </a>
             </div>
         </div>
 
-        <form action="#" class="contact-form">
+        <form id="contact-form" class="contact-form">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" required>
+                    <input type="text" id="name" name="name" required>
                     <label>Nome Completo</label>
                     <i class='bx bx-user'></i>
                 </div>
                 
                 <div class="input-box">
-                    <input type="email" required>
+                    <input type="email" id="email" name="email" required>
                     <label>Email</label>
                     <i class='bx bx-envelope'></i>
                 </div>
             </div>
 
             <div class="input-box">
-                <input type="text" required>
+                <input type="text" id="subject" name="subject" required>
                 <label>Assunto</label>
                 <i class='bx bx-chat'></i>
             </div>
 
             <div class="input-box">
-                <textarea required></textarea>
+                <textarea id="message" name="message" required></textarea>
                 <label>Sua Mensagem</label>
                 <i class='bx bx-message-detail'></i>
             </div>
 
-            <button type="submit" class="btn">
+            <button type="submit" class="btn" id="send-btn">
                 Enviar Mensagem
                 <i class='bx bx-send'></i>
             </button>
@@ -407,6 +423,9 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="email-config.js"></script>
     <script src="script.js"></script>
 </body>
 
